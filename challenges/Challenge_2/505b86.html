@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+    
+        <div class="next">
+            <a href="../Challenge_3/5278ec.html" class="navLink"><i class="fa fa-arrow-right"></i></a>
+        </div>
+
+        <div class="container">
+            <h1 id="challenge-2-sentiment-analysis-from-social-media">Challenge 2: Sentiment Analysis from Social Media</h1>
+            <h3 id="what-s-happening-">What’s Happening:</h3>
+            <p>As the flooding spreads, thousands of residents across the city are posting live updates on social media. City officials are struggling to make sense of this amount of information. Your team has been asked to build an intelligent service that can analyze these posts and detect messages showing distress, panic, or calmness. This will help decision-makers allocate emergency resources more effectively.</p>
+            <h3 id="your-mission-">Your Mission:</h3>
+            <p>Build an Azure Function in C# that reads social media messages from a CSV file (<code>social_media_tweets.csv</code>) and sends them to Azure Cognitive Services for sentiment analysis. Then, save the results — including sentiment scores — to Azure Blob Storage, continuing the same storage logic used in Challenge 1.</p>
+            <h3 id="file-needed-">File Needed:</h3>
+            <p><a href="social_media_tweets.zip">social_media_tweets.csv</a> (CSV format with fields: tweetId, timestamp, location, text)</p>
+            <h2 id="success-criteria">Success Criteria</h2>
+            <p><em>Given the complexity and variety of potential solutions, the goals for all the challenges are verified by your team’s coach.</em></p>
+            <ul>
+            <li>The Azure Function reads and parses the CSV data.  </li>
+            <li>Each tweet is analyzed using Azure’s Text Analytics API.  </li>
+            <li>The enriched results (original tweet + sentiment) are saved to Azure Blob Storage.  </li>
+            <li>The output files are consistent in format with those from Challenge 1.</li>
+            </ul>
+            <h2 id="references">References</h2>
+            <ul>
+            <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/quickstart?pivots=programming-language-csharp">Get started with Sentiment Analysis</a>  </li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/authentication">AI Services Authentication</a></li>
+            </ul>
+
+            <br />
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+          const pageKeys = {
+          "../Challenge_3/5278ec.html": "5278ec"
+          };
+
+          function hash(str) {
+              let h = 0;
+              for (let i = 0; i < str.length; i++) {
+                  h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+              }
+              return Math.abs(h).toString(16).slice(0, 6);
+          }
+
+          document.querySelectorAll("a.navLink").forEach(link => {
+              const target = link.getAttribute("href");
+              if (pageKeys[target]) {
+                  link.addEventListener("click", function (e) {
+                      e.preventDefault();
+                      const input = prompt("Enter the access key to continue:");
+                      if (hash(input) === pageKeys[target]) {
+                          window.location.href = target;
+                      } else {
+                          alert("Invalid key. Access denied.");
+                      }
+                  });
+              }
+          });
+      </script>
+    </body>
+</html>

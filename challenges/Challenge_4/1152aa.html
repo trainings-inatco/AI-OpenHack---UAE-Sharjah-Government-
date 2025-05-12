@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+       
+        <div class="next">
+            <a href="../Challenge_5/727bce.html" class="navLink"><i class="fa fa-arrow-right"></i></a>
+        </div>
+
+        <div class="container">
+            <h1 id="challenge-4-emergency-call-transcription-voice-to-text-">Challenge 4: Emergency Call Transcription (Voice to Text)</h1>
+            <h3 id="what-s-happening-">What’s Happening:</h3>
+            <p>The city&#39;s emergency call center is overwhelmed by incoming calls during the flood crisis. To quickly and effectively respond to critical cases, emergency teams need accurate transcriptions of recorded calls to identify urgent situations, exact locations, and specific details mentioned by callers. Your task is to help the call center automatically transcribe these audio recordings, making it easier and faster for rescue teams to act.</p>
+            <h3 id="your-mission-">Your Mission:</h3>
+            <p>Use Azure Speech-to-Text within an Azure Function (C#) to transcribe provided emergency call audio files. Store these transcriptions in Azure Blob Storage and ensure they clearly identify caller information, location details, and urgency indicators.</p>
+            <h3 id="file-needed-">File Needed:</h3>
+            <p><a href="emergency_calls_audio.zip">emergency_calls_audio.zip</a></p>
+            <h2 id="success-criteria">Success Criteria</h2>
+            <p><em>Given the complexity and variety of potential solutions, the goals for all challenge are verified by your team’s coach.</em></p>
+            <ul>
+            <li>Azure Function reads audio files from Blob Storage.  </li>
+            <li>Accurately transcribes audio content using Azure Speech-to-Text.  </li>
+            <li>Stores clearly formatted transcriptions in Azure Blob Storage.  </li>
+            <li>Provides outputs that can be easily linked to sentiment and drone image results.</li>
+            </ul>
+            <h2 id="references">References</h2>
+            <ul>
+            <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-speech-to-text?tabs=windows%2Cterminal&amp;pivots=programming-language-csharp">Get started with Speech-to-Text</a></li>
+            </ul>
+            <br />
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+          const pageKeys = {
+          "../Challenge_5/727bce.html": "727bce"
+          };
+
+          function hash(str) {
+              let h = 0;
+              for (let i = 0; i < str.length; i++) {
+                  h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+              }
+              return Math.abs(h).toString(16).slice(0, 6);
+          }
+
+          document.querySelectorAll("a.navLink").forEach(link => {
+              const target = link.getAttribute("href");
+              if (pageKeys[target]) {
+                  link.addEventListener("click", function (e) {
+                      e.preventDefault();
+                      const input = prompt("Enter the access key to continue:");
+                      if (hash(input) === pageKeys[target]) {
+                          window.location.href = target;
+                      } else {
+                          alert("Invalid key. Access denied.");
+                      }
+                  });
+              }
+          });
+      </script>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+tweetId,timestamp,location,text
+t001,2025-04-13T09:00:00Z,Downtown,Water is entering my house! Help please!
+t002,2025-04-13T09:05:00Z,Old Town,We are safe for now. Water level is still low.
+t003,2025-04-13T09:10:00Z,Uptown,Flooding is getting worse. Streets are not passable.
+t004,2025-04-13T09:15:00Z,Riverside,Still waiting for rescue. Getting anxious and cold.
+t005,2025-04-13T09:20:00Z,Industrial Park,Situation is under control. No panic here.

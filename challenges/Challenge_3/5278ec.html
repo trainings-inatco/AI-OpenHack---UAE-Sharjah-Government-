@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="next">
+            <a href="../Challenge_4/1152aa.html" class="navLink"><i class="fa fa-arrow-right"></i></a>
+        </div>
+
+        <div class="container">
+            <h1 id="challenge-3-visual-analysis-using-custom-vision">Challenge 3: Visual Analysis Using Custom Vision</h1>
+            <h3 id="what-s-happening-">What’s Happening:</h3>
+            <p>Drones are flying over flood-affected areas capturing images of buildings, roads, and neighborhoods. Some zones clearly require urgent rescue due to visible water damage or trapped individuals. City officials need a system that can automatically classify drone images as urgent or non-urgent, so they can prioritize where to dispatch rescue teams.</p>
+            <h3 id="your-mission-">Your Mission:</h3>
+            <p>Use Azure Custom Vision to train a classification model that can recognize whether a drone image depicts an urgent situation. You’ll then use a C# app (or Function) to upload images, analyze them using the trained model, and store the results in Blob Storage for further decision-making.</p>
+            <h3 id="file-needed-">File Needed:</h3>
+            <p><a href="drone_images.zip">drone_images.zip</a> (Zip file containing labeled sample drone images – filenames include urgent or non-urgent)</p>
+            <h2 id="success-criteria">Success Criteria</h2>
+            <p><em>Given the complexity and variety of potential solutions, the goals for all challenge are verified by your team’s coach.</em></p>
+            <ul>
+            <li>Images are successfully uploaded and tagged in Azure Custom Vision.  </li>
+            <li>A trained model can classify images as urgent or non-urgent.  </li>
+            <li>A C# solution uses the prediction endpoint to classify new images.  </li>
+            <li>Classification results are stored in Azure Blob Storage.</li>
+            </ul>
+            <h2 id="references">References</h2>
+            <ul>
+            <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/getting-started-build-a-classifier">Get started with Image Classifier</a>  </li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/use-prediction-api">Prediction API</a></li>
+            </ul>
+            <br />
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+          const pageKeys = {
+          "../Challenge_4/1152aa.html": "1152aa"
+          };
+
+          function hash(str) {
+              let h = 0;
+              for (let i = 0; i < str.length; i++) {
+                  h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+              }
+              return Math.abs(h).toString(16).slice(0, 6);
+          }
+
+          document.querySelectorAll("a.navLink").forEach(link => {
+              const target = link.getAttribute("href");
+              if (pageKeys[target]) {
+                  link.addEventListener("click", function (e) {
+                      e.preventDefault();
+                      const input = prompt("Enter the access key to continue:");
+                      if (hash(input) === pageKeys[target]) {
+                          window.location.href = target;
+                      } else {
+                          alert("Invalid key. Access denied.");
+                      }
+                  });
+              }
+          });
+      </script>
+    </body>
+</html>

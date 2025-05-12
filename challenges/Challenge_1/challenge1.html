@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="next">
+          <a href="../Challenge_2/505b86.html" class="navLink"><i class="fa fa-arrow-right"></i></a>
+        </div>
+
+        <div class="container">
+            <h1><u>Challenge 1:</u> Data Ingestion and Storage</h1>
+            <h3>Please ensure your machine conforms to these prerequisites.</h3>
+            <ul>
+            <li><p>A modern laptop running Windows 10 or higher</p></li>
+            <li>Your preferred IDE (integrated development environments), like Visual Studio Code:
+            <ul>
+            <li><p>If using Visual Studio Code in Windows, make sure you have the latest Visual Studio Code version for your OS, and</p>
+            <ul>
+            <li><p><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions" target="_blank">VSCode Azure Functions extension</a></p></li>
+            <li><p><a href="https://docs.microsoft.com/azure/azure-functions/functions-run-local#v3" target="_blank">Azure Functions Core Tools</a></p></li>
+            </ul></li>
+            <li><p>Optionally, you may just desire to get the Azure Tools extension, which includes functions and many other Azure resources</p>
+            <ul>
+            <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack" target="_blank">Azure Tools VSCode Extensions</a></li>
+            </ul></li>
+            </ul></li>
+            </ul>
+            <h2>Language specific prerequisites</h2>
+            <p>Depending on the language your team uses, there are additional prerequisites that your machine will need to have. Please review these language specific prerequisites to ensure your machine is ready for the open hack.</p><br>
+            <h2>C# .NET Core</h2>
+            <ul>
+            <li><p>Install the latest version of <a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a> for Windows.</p></li>
+            <li><p>Download and install the <a href="https://dotnet.microsoft.com/en-us/download" target="_blank">.NET SDK (version 9.0)</a>. Restart your machine after installation to ensure the path variables are updated.</p></li>
+            <li><p>Open VS Code and install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp" target="_blank">C# extension for Visual Studio Code</a>.</p></li>
+            <li><p>To verify the installation:</p>
+                <ul>
+                <li><code>dotnet --version</code> in a new terminal should return the installed SDK version.</li>
+                </ul>
+            </li>
+            <li><h4>Ensure you also have <a href="https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools" target="_blank">Azure Functions Core Tools</a> installed for local testing.</h4></li>
+            </ul><br>
+            <h2>Python</h2>
+            <h4>Previous Versions</h4>
+            <p>If you have 3.6.x or 3.7.x you <strong>should</strong> have no issues with those versions, just be certain to select the correct version when creating your function apps at Azure.</p>
+            <h4>Use VSCode with the Azure Functions Extension</h4>
+            <p>It is very easy to work with VSCode with python functions at Azure. Although you may be new to VSCode, it is recommended due to the high availability of extensions that can easily run (locally) and publish Azure functions to your integrated Azure subscription.</p>
+            <ul>
+            <li><p><a href="https://www.python.org/downloads/" target="_blank">Python 3.8.x</a></p>
+            <ul>
+            <li><p>Using VSCode with Azure Functions extension makes it easy to select the compiler. language, and project and integrate directly to your function app at Azure, including deployment.</p></li>
+            <li><p>VS Code users on Windows, in the past, python interpreter selection can be troublesome. Review <a href="https://code.visualstudio.com/docs/languages/python#_environments" target="_blank">Python in VS Code environments</a> for assistance with this if you run into issues.</p></li><br><br>
+            </ul></li>
+            </ul>
+            <h2>IDE</h2>
+            <ul>
+            <li><p><a href="https://code.visualstudio.com/download" target="_blank">VSCode</a></p></li>
+            <li><p><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions" target="_blank">VSCode Azure Functions extension</a></p></li>
+            <li><p><a href="https://docs.microsoft.com/azure/azure-functions/functions-run-local#v3" target="_blank">Azure Functions Core Tools</a>. You need this to run/test locally.</p></li>
+            <li><p><a href="https://docs.microsoft.com/cli/azure" target="_blank">Azure CLI</a></p></li>
+            <li><p><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage" target="_blank">VSCode Azure Storage extension</a></p></li>
+            </ul><br />
+            <h3>What’s Happening: </h3>
+            <p>A network of IoT water-level sensors deployed across the city is sending a continuous stream of flood data. The city’s command center has tasked your team with building a reliable ingestion pipeline to collect and store this data in real-time. This information will be critical for downstream analytics, predictions, and communication.</p>
+            <h3>Your Mission: </h3>
+            <p>Build an Azure Function in C# that listens for incoming sensor data and saves it to Azure Blob Storage. You’ll simulate this by reading from a local file (iot_sensor_data.json) and posting its contents to your Azure Function endpoint.</p>
+            <h3>File Needed:</h3>
+            <p><a href="iot_sensor_data.zip" download="iot_sensor_data.json">iot_sensor_data.json</a> (JSON format with fields: sensorId, timestamp, location, waterLevel)</p>
+            <h2>Success Criteria</h2>
+            <p><em>Given the complexity and variety of potential solutions, the goals for all challenge are verified by your team’s coach.</em></p>
+            <ul>
+            <li><p>The Azure Function receives and parses sensor data. </p></li>
+            <li><p>The data is saved in a structured format in Azure Blob Storage. </p></li>
+            <li><p>The solution runs end-to-end using the provided dataset.</p></li>
+            </ul>
+            <h2>References</h2>
+            <ul>
+            <li><p><a href="https://docs.microsoft.com/azure/azure-functions/functions-overview" target="_blank">An introduction to Azure Functions</a></p></li>
+            <li><p><a href="https://docs.microsoft.com/azure/azure-functions/supported-languages" target="_blank">Supported languages in Azure Functions</a></p></li>
+            <li><p><a href="https://docs.microsoft.com/azure/azure-functions/functions-develop-vs-code?tabs=csharp" target="_blank">Write Azure functions in VSCode</a></p></li>
+            <li><p><a href="https://docs.microsoft.com/azure/azure-functions/functions-test-a-function" target="_blank">Strategies for testing your code in Azure Functions</a></p></li>
+            <li><p><a href="https://docs.microsoft.com/azure/azure-functions/functions-develop-local" target="_blank">Code and test Azure Functions locally</a></p></li>
+            <li><p><a href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-dotnet" target="_blank">Store blobs with .NET</a></p></li>
+            </ul>
+
+            <br />
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script>
+            const pageKeys = {
+            "../Challenge_2/505b86.html": "505b86"
+            };
+
+            function hash(str) {
+                let h = 0;
+                for (let i = 0; i < str.length; i++) {
+                    h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+                }
+                return Math.abs(h).toString(16).slice(0, 6);
+            }
+
+            document.querySelectorAll("a.navLink").forEach(link => {
+                const target = link.getAttribute("href");
+                if (pageKeys[target]) {
+                    link.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const input = prompt("Enter the access key to continue:");
+                        if (hash(input) === pageKeys[target]) {
+                            window.location.href = target;
+                        } else {
+                            alert("Invalid key. Access denied.");
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

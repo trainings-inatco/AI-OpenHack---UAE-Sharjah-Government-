@@ -1,0 +1,59 @@
+body{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+p, li{
+    font-size: 15px;
+}
+.navbar{
+    border-bottom: 1px #000000 solid;
+    box-shadow: 0 8px 6px -6px #888888;
+}
+.navbar a {
+    color: #000000 !important;
+}
+.navbar .dropdown-menu li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar .navLink:hover, .navbar .navLink:focus, .navbar .navLink:active{
+    background-color: #286090 !important;
+    color: #ffffff !important;
+}
+.navLink {
+    font-size: 14px;
+}
+.back{
+    left: 25px;
+    top: 50%;
+    position: fixed;
+    transform: translateY(-50%);
+}
+.next{
+    right: 25px;
+    top: 50%;
+    position: fixed;
+    transform: translateY(-50%);
+}
+.back a, .next a{
+    color: #000000;
+    font-size: xx-large;
+}
+#homeContent{
+    text-align: center;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: #000000;
+}
+.solutionList{
+    list-style: decimal;
+}
+img{
+    max-width: 100%;
+}

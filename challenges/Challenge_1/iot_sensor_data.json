@@ -1,0 +1,32 @@
+[
+    {
+        "sensorId": "sensor-001",
+        "timestamp": "2025-04-13T08:00:00Z",
+        "location": "Downtown",
+        "waterLevel": 1.2
+    },
+    {
+        "sensorId": "sensor-002",
+        "timestamp": "2025-04-13T08:05:00Z",
+        "location": "Uptown",
+        "waterLevel": 2.3
+    },
+    {
+        "sensorId": "sensor-003",
+        "timestamp": "2025-04-13T08:10:00Z",
+        "location": "Riverside",
+        "waterLevel": 3.5
+    },
+    {
+        "sensorId": "sensor-004",
+        "timestamp": "2025-04-13T08:15:00Z",
+        "location": "Industrial Park",
+        "waterLevel": 2.9
+    },
+    {
+        "sensorId": "sensor-005",
+        "timestamp": "2025-04-13T08:20:00Z",
+        "location": "Old Town",
+        "waterLevel": 4.1
+    }
+]

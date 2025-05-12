@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="next">
+            <a><i class="fa fa-check"></i></a>
+        </div>
+
+        <div class="container">
+            <h1 id="challenge-5-rescue-command-center-copilot-agent">Challenge 5: Rescue Command Center Copilot Agent</h1>
+            <h3 id="what-s-happening-">What’s Happening:</h3>
+            <p>As emergency insights flow in from sensors, social media, drones, and emergency calls, the city’s operations team wants to query the situation using natural language — but without relying on outdated bot frameworks.</p>
+            <p>Instead of using the Bot Framework Emulator, you’ll build a Copilot Agent (via AI Foundry) that communicates with Azure Functions to answer key questions such as:</p>
+            <ul>
+            <li>&quot;How many urgent cases were detected?&quot;<ul>
+            <li>&quot;Show safe calls&quot;</li>
+            <li>&quot;What locations were mentioned?&quot;</li>
+            <li>“Social sentiment summary?”</li>
+            <li>&quot;Highest water level?&quot;</li>
+            <li>&quot;What did drones detect?”</li>
+            </ul>
+            </li>
+            </ul>
+            <p>This AI-powered agent will act as a rescue control assistant, pulling real-time data from structured JSON files produced in previous challenges and delivering answers via conversational AI.</p>
+            <h3 id="your-mission-">Your Mission:</h3>
+            <p>Use Copilot Agent to configure a smart conversational interface.
+            The agent will call predefined Azure Function endpoints which analyze and return insights based on:</p>
+            <ul>
+            <li>Sensors data from challenge 1</li>
+            <li>Sentiment analysis from challenge 2</li>
+            <li>Classified drone image from challenge 3</li>
+            <li>Trancripts from challenge 4</li>
+            </ul>
+            <p>As a whole, this challenge is using the data of the <strong>results</strong> of the previous challenges, by accessing the containers that received the outputs of the Azure functions from challenge 01 to 04.</p>
+            <p>Each API should return data in a format that the Copilot Agent can convert into clear natural responses using topic-based logic.</p>
+            <h2 id="success-criteria">Success Criteria</h2>
+            <p><em>Given the complexity and variety of potential solutions, the goals for all challenge are verified by your team’s coach.</em></p>
+            <ul>
+            <li>Copilot Agent is live and functioning</li>
+            </ul>
+            <ul>
+            <li>It responds to user prompts using real Azure Functions (not mock data)</li>
+            </ul>
+            <ul>
+            <li>Responses are based on structured JSON files from Blob Storage</li>
+            </ul>
+            <ul>
+            <li>Agent topics are defined clearly with callouts to correct Azure endpoints</li>
+            </ul>
+            <h2 id="references">References</h2>
+            <ul>
+            <li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-service/agent-copilot-overview">AI Agent Copilot Overview</a></li>
+            </ul>
+            <ul>
+            <li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio">Copilot Studio</a></li>
+            </ul>
+            <ul>
+            <li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-get-started?tabs=web">Copilot Studio Fundamentals</a></li>
+            </ul>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
